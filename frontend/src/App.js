@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ClientList from "./components/ClientList";
 import AddClient from "./components/AddClient";
 import EditClient from "./components/EditClient";
@@ -9,17 +9,16 @@ function App() {
     <div className="container">
       <div className="columns">
         <div className="column is-half is-offset-one-quarter">
-          <Switch>
-            <Route exact path="/">
-              <ClientList />
+          <Routes>
+
+            <Route exact path="/" element={ <ClientList />}>
             </Route>
-            <Route path="/clientadd">
-              <AddClient />
+            <Route path="/clientadd" element={<AddClient />}>
             </Route>
-            <Route path="/clientedit/:id">
-              <EditClient />
+            <Route path="/clientedit/:id" element={<EditClient />}>
             </Route>
-          </Switch>
+
+          </Routes>
         </div>
       </div>
     </div>

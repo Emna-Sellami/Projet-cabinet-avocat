@@ -1,23 +1,21 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from 'react'
 import axios from "axios";
-import { useHistory, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
  
 const EditClient = () => {
     const [nom, setNom] = useState('');
     const [adresse, setAdresse] = useState('');
     const [telephone, setTelephone] = useState('');
-    const history = useHistory();
     const { id } = useParams();
  
     const updateClient = async (e) => {
         e.preventDefault();
-        await axios.patch(`http://localhost:5000/products/${id}`,{
+        await axios.patch(`http://localhost:5000/clients/${id}`,{
             nom: nom,
             adresse: adresse,
-            telephone:telephone
+            telephone: telephone
         });
-        history.push("/");
     }
  
     useEffect(() => {

@@ -1,13 +1,12 @@
 
 import { useState } from 'react'
 import axios from "axios";
-import { useHistory } from 'react-router-dom';
  
 const AddClient = () => {
     const [nom, setNom] = useState('');
     const [adresse, setAdresse] = useState('');
     const [telephone, setTelephone] = useState('');
-    const history = useHistory();
+    
  
     const saveClient = async (e) => {
         e.preventDefault();
@@ -16,7 +15,7 @@ const AddClient = () => {
             adresse: adresse,
             telephone:telephone
         });
-        history.push("/");
+        
     }
  
     return (
