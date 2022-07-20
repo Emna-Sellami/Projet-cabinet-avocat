@@ -13,7 +13,7 @@ const ClientList = () => {
     const [nom, setNom] = useState('');
     const [adresse, setAdresse] = useState('');
     const [telephone, setTelephone] = useState('');
-
+    
  
     const saveClient = async (e) => {
         e.preventDefault();
@@ -44,7 +44,7 @@ const ClientList = () => {
             <div className=" offset-sm-2 mt-5 mb-4 text-gred" style={{width:"60%", textAlign:"center"}}><h2 style={{color:"green"}}><b>Liste Des Clients</b></h2></div>
             <Button onClick={handleShow} className=" offset-sm-1 mt-5 mb-4 text-gred" variant="primary">Ajouter Nouveau Client</Button>
             </div>
-            <table className="table is-striped is-fullwidth">
+            <table className="table table-striped table-hover table-bordered">
                 <thead>
                     <tr>
                         <th>No</th>
@@ -125,7 +125,7 @@ const ClientList = () => {
  
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            Fermer
           </Button>
           
         </Modal.Footer>

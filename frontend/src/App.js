@@ -4,7 +4,6 @@ import EditClient from "./components/EditClient";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import DossierList from "./components/DossierList";
-import AddDossier from "./components/AddDossier";
 import EditDossier from "./components/EditDossier";
  
 function App() {
@@ -19,7 +18,11 @@ function App() {
 
             <Route exact path="/clientlist" element={ <ClientList />}>
             </Route>
+            <Route exact path="/dossierlist" element={ <DossierList />}>
+            </Route>
             <Route path="/clientedit/:id" element={<EditClient />}>
+            </Route>
+            <Route path="/dossieredit/:id" element={<EditDossier />}>
             </Route>
 
           </Routes>

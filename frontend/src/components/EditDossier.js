@@ -33,12 +33,14 @@ const EditDossier = () => {
     }
 
     return (
-        <div>
+        <div className='container'>
+        <div className='w-75 mx-auto shadow p-5  mt-3'>
+            <h2 className='text-center mb-4'>Modifier Les Données Du Dossier</h2>
             <form onSubmit={ updateDossier }>
-            <div className="field">
+            <div className="form-group">
                     <label className="label">Section</label>
                     <input 
-                        className="input"
+                        className="form-control form-control-lg"
                         type="text"
                         placeholder="Section"
                         value={ section }
@@ -46,10 +48,10 @@ const EditDossier = () => {
                     />
                 </div>
 
-                <div className="field">
+                <div className="form-group">
                     <label className="label">Client</label>
                     <input 
-                        className="input"
+                        className="form-control form-control-lg"
                         type="text"
                         placeholder="Client"
                         value={ client }
@@ -57,10 +59,10 @@ const EditDossier = () => {
                     />
                 </div>
 
-                <div className="field">
+                <div className="form-group">
                     <label className="label">Adversaire</label>
                     <input 
-                        className="input"
+                        className="form-control form-control-lg"
                         type="text"
                         placeholder="Adversaire"
                         value={ adversaire }
@@ -68,10 +70,10 @@ const EditDossier = () => {
                     />
                 </div>
  
-                <div className="field">
+                <div className="form-group">
                     <label className="label">AvocatAdversaire</label>
                     <input 
-                        className="input"
+                        className="form-control form-control-lg"
                         type="text"
                         placeholder="Avocat de l'adversaire"
                         value={ avocatAdversaire }
@@ -80,9 +82,10 @@ const EditDossier = () => {
                 </div>
  
                 <div className="field">
-                    <button className="button is-primary">Mettre à Jour</button>
+                    <button className="btn btn-warning btn-block mt-3" style={{width:"100%"}}>Mettre à Jour</button>
                 </div>
             </form>
+        </div>    
         </div>
     )
 }
