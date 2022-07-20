@@ -30,34 +30,36 @@ const EditClient = () => {
     }
 
     return (
-        <div>
+        <div className='container'>
+        <div className='w-75 mx-auto shadow p-5  mt-3'>
+            <h2 className='text-center mb-4'>Modifier Les Données Du Client</h2>
             <form onSubmit={ updateClient }>
-                <div className="field">
+                <div className="form-group">
                     <label className="label">Nom</label>
                     <input 
-                        className="input"
+                        className="form-control form-control-lg"
                         type="text"
                         placeholder="Nom"
                         value={ nom }
                         onChange={ (e) => setNom(e.target.value) }
                     />
                 </div>
- 
-                <div className="field">
+
+                <div className="form-group">
                     <label className="label">Adresse</label>
                     <input 
-                        className="input"
+                        className="form-control form-control-lg"
                         type="text"
                         placeholder="Adresse"
                         value={ adresse }
                         onChange={ (e) => setAdresse(e.target.value) }
                     />
                 </div>
-
-                <div className="field">
+ 
+                <div className="form-group">
                     <label className="label">Telephone</label>
                     <input 
-                        className="input"
+                        className="form-control form-control-lg"
                         type="text"
                         placeholder="Telephone"
                         value={ telephone }
@@ -66,9 +68,10 @@ const EditClient = () => {
                 </div>
  
                 <div className="field">
-                    <button className="button is-primary">Mettre à Jour</button>
+                    <button className="btn btn-warning btn-block mt-3" style={{width:"100%"}}>Mettre à Jour</button>
                 </div>
             </form>
+        </div>
         </div>
     )
 }

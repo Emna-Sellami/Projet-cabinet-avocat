@@ -11,7 +11,7 @@ export const getAllClients = async (req, res) => {
  
 export const getClientById = async (req, res) => {
     try {
-        const client = await client.findAll({
+        const client = await Client.findAll({
             where: {
                 id: req.params.id
             }
@@ -32,7 +32,7 @@ export const createClient = async (req, res) => {
         res.json({ message: error.message });
     }  
 }
-
+ 
 export const updateClient = async (req, res) => {
     try {
         await Client.update(req.body, {

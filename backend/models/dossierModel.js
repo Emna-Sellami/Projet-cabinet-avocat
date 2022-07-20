@@ -4,6 +4,9 @@ import db from "../config/database.js";
 const { DataTypes } = Sequelize;
  
 const Dossier = db.define('dossiers',{
+    section:{
+        type: DataTypes.STRING
+    },
     client:{
         type: DataTypes.STRING
     },
