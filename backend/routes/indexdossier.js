@@ -5,7 +5,8 @@ import {
     createDossier,
     getDossierById,
     updateDossier,
-    deleteDossier
+    deleteDossier,
+    getDossierByNom
 } from "../controllers/Dossiers.js";
 
  
@@ -16,5 +17,6 @@ router.get('/:id', getDossierById);
 router.post('/', createDossier);
 router.patch('/:id', updateDossier);
 router.delete('/:id', deleteDossier);
+router.get('/:client', getDossierByNom);
  
 export default router;

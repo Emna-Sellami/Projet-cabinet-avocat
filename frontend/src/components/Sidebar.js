@@ -12,6 +12,7 @@ import {
 
 //import icons from react icons
 import {FiHome,FiFolder,FiUsers, FiLogOut, FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
+import { MdAccountBalance } from "react-icons/md";
 
 
 //import sidebar css from react-pro-sidebar module and our custom css 
@@ -32,21 +33,17 @@ const Header = () => {
 
   return (
     <>
-      <div id="header">
+      <div id="header" >
           {/* collapsed props to change menu size using menucollapse state */}
         <ProSidebar collapsed={menuCollapse}>
-          <SidebarHeader>
+          <SidebarHeader style={{height:"55px"}}>
           <div className="logotext">
               {/* small and big change using menucollapse state */}
-              <p>{menuCollapse ? "Logo" : "Big Logo"}</p>
+              <p>{menuCollapse ? (<MdAccountBalance style={{fontSize:"28px",marginLeft:"7px"}}/>) : (<div style={{display:"flex"}}><MdAccountBalance style={{marginTop:"5px",marginBottom:"5px",marginLeft:"1px",fontSize:"23px"}}/><p style={{fontStyle:"normal"}}>Mon Bureau</p></div>) }</p>
             </div>
             <div className="closemenu" onClick={menuIconClick}>
                 {/* changing menu collapse icon on click */}
-              {menuCollapse ? (
-                <FiArrowRightCircle/>
-              ) : (
-                <FiArrowLeftCircle/>
-              )}
+              {menuCollapse ? ( <FiArrowRightCircle/> ) : ( <FiArrowLeftCircle/>)}
             </div>
           </SidebarHeader>
           <SidebarContent>
@@ -57,9 +54,6 @@ const Header = () => {
             </Menu>
           </SidebarContent>
           <SidebarFooter>
-            <Menu iconShape="square">
-              <MenuItem icon={<FiLogOut />}>Logout</MenuItem>
-            </Menu>
           </SidebarFooter>
         </ProSidebar>
       </div>

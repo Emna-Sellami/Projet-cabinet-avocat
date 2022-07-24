@@ -62,3 +62,16 @@ export const deleteDossier = async (req, res) => {
         res.json({ message: error.message });
     }  
 }
+
+export const getDossierByNom = async (req, res) => {
+    try {
+        const dossier = await Dossier.findOne({
+            where: {
+                id: req.params.id
+            }
+        });
+        res.json(dossier[0]);
+    } catch (error) {
+        res.json({ message: error.message });
+    }  
+}

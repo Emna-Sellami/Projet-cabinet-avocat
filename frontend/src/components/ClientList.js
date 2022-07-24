@@ -55,13 +55,14 @@ const ClientList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    { clients.map((client, index) => (
+                { clients.map((client, index) => (
                         <tr key={ client.id }>
                             <td>{ index + 1 }</td>
                             <td>{ client.nom }</td>
                             <td>{ client.adresse }</td>
                             <td>{ client.telephone }</td>
                             <td>
+                                <a href={`/clientdossierlist/${client.id}`} className="view" title="View" data-toggle="tooltip" style={{color:"#10ab80"}}><i class="material-icons">&#xE417;</i></a>
                                 <a href={`/clientedit/${client.id}`} className="edit" title="Edit" data-toggle="tooltip"><i className="material-icons">&#xE254;</i></a>
                                 <a onClick={ () => deleteClient(client.id) } className="delete" title="Delete" data-toggle="tooltip" style={{color:"red"}}><i className="material-icons">&#xE872;</i></a>
                             </td>

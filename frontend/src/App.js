@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import DossierList from "./components/DossierList";
 import EditDossier from "./components/EditDossier";
+
+import ClientDossierList from "./components/ClientDossierList";
  
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
             <Route path="/clientedit/:id" element={<EditClient />}>
             </Route>
             <Route path="/dossieredit/:id" element={<EditDossier />}>
+            </Route>
+            <Route path="/clientdossierlist/:id" element={<ClientDossierList />}>
             </Route>
 
           </Routes>
