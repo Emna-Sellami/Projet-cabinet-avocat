@@ -55,7 +55,7 @@ const ClientList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                { clients.map((client, index) => (
+                { clients.map( (client, index) => (
                         <tr key={ client.id }>
                             <td>{ index + 1 }</td>
                             <td>{ client.nom }</td>

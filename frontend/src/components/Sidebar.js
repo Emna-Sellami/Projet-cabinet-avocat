@@ -48,7 +48,7 @@ const Header = () => {
           </SidebarHeader>
           <SidebarContent>
             <Menu iconShape="square">
-              <MenuItem icon={<FiHome />}> <a href={`/`}>Accueil</a></MenuItem>
+              <MenuItem icon={<FiHome />}> <a href={`/Accueil`}>Accueil</a></MenuItem>
               <MenuItem icon={<FiUsers />}><a href={`/clientlist`}>Clients</a></MenuItem>
               <MenuItem icon={<FiFolder />}><a href={`/dossierlist`}>Dossiers</a></MenuItem>
             </Menu>

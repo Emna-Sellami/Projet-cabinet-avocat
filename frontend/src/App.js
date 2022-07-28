@@ -3,6 +3,7 @@ import ClientList from "./components/ClientList";
 import EditClient from "./components/EditClient";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
+import Cards from "./components/Cards";
 import DossierList from "./components/DossierList";
 import EditDossier from "./components/EditDossier";
 
@@ -17,7 +18,9 @@ function App() {
       <div className="columns container">
         <div className="column is-half is-offset-one-quarter">
           <Routes>
-
+            
+            <Route exact path="/Accueil" element={ <Cards />}>
+            </Route>
             <Route exact path="/clientlist" element={ <ClientList />}>
             </Route>
             <Route exact path="/dossierlist" element={ <DossierList />}>
